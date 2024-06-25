@@ -1,0 +1,57 @@
+@import '../../styles/variables';
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+
+	min-height: 100vh;
+	max-width: 1200px;
+	width: 100%;
+
+	// padding: 25px;
+	margin: 0 auto;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+
+	& .otherPages {
+		height: 280px;
+		border-radius: 0 0 20px 20px;
+		box-shadow: $bx-16;
+		@media (max-width: $mobile) {
+			height: 260px !important;
+		}
+	}
+}
+
+.heading {
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 3rem;
+	color: $white;
+	font-size: 30px;
+	font-weight: bold;
+	@media (max-width: $mobile) {
+		font-size: 24px;
+	}
+}
+.backLink {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+	color: $primary-light;
+	max-width: 255px;
+}
+
+.info {
+	display: grid;
+	grid-template-columns: 7fr 5fr;
+	align-items: start;
+
+	gap: 20px;
+
+	@media (max-width: $mobile) {
+		display: block;
+	}
+}

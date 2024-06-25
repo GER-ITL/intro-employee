@@ -1,0 +1,50 @@
+@import '../../styles/variables';
+
+.wrapper {
+	background-color: $primary;
+	font-family: $default-font;
+	border-radius: 10px;
+	margin-top: 20px;
+	padding: 20px;
+	color: $white;
+	img {
+		width: 150px;
+		height: auto;
+		border-radius: 50%;
+	}
+	.time {
+		color: $primary-light;
+	}
+}
+.nav {
+	display: flex;
+	a {
+		margin-right: 20px;
+		font-weight: bold;
+		color: $primary-light;
+	}
+	@media (max-width: $mobile) {
+		flex-direction: column;
+		text-align: center;
+		margin-right: 0;
+	}
+}
+.user {
+	display: flex;
+	> div {
+		margin: 10px;
+	}
+	@media (max-width: $mobile) {
+		flex-direction: column;
+		h1 {
+			font-size: 1.5em;
+			text-align: center;
+		}
+		p {
+			text-align: center;
+		}
+		> div {
+			margin: 0 auto;
+		}
+	}
+}

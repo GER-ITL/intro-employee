@@ -1,0 +1,56 @@
+@import '../../../../styles/variables';
+
+.listSelect {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
+	margin-bottom: 10px;
+	@media (max-width: $mobile) {
+		grid-template-columns: 1fr;
+	}
+}
+.selects {
+	.heads {
+		display: flex;
+
+		justify-content: space-between;
+
+		button {
+			background-color: transparent;
+			border: none;
+			outline: none;
+			cursor: pointer;
+			color: $primary-light;
+		}
+	}
+
+	div {
+		margin: 0 auto;
+		margin-top: 10px;
+	}
+	input {
+		background-color: transparent;
+		border: 1px solid $primary-light;
+		border-radius: 5px;
+		color: $white;
+		font-family: $default-font;
+		outline: none;
+		padding: 10px 50px;
+	}
+}
+.field {
+	span {
+		position: relative;
+		padding-inline: 3px;
+		font-size: 10px;
+		background-color: $primary;
+		top: -19px;
+		left: 60px;
+		width: 100%;
+	}
+}
+
+// .gridRow {
+// 	grid-column-start: 1;
+// 	grid-column-end: 3;
+// }

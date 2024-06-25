@@ -1,0 +1,42 @@
+@import '../../../styles/variables';
+.header {
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.rightMenu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@media (max-width: $mobile) {
+		button {
+			display: none;
+		}
+	}
+}
+.checkUser {
+	background-color: transparent;
+	border: 1px solid $primary;
+	border-radius: 20px;
+	max-width: 50px;
+	outline: none;
+	color: $white;
+	height: 100%;
+	padding: 2px 15px;
+	margin-right: 5px;
+	cursor: pointer;
+	img {
+		width: 30px;
+		border-radius: 50%;
+	}
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.hamburg {
+	padding: 15px;
+	color: $white;
+}

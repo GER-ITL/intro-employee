@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap');
+$primary: #29292a;
+$primary-light: #76787a;
+$accent: #0047bb;
+$white: #e6e6fa;
+$error: #8b2d3d;
+$success: #2e7d32;
+$black: #191919;
+$hard-dark-accent: darken($accent, 30%);
+$dark-accent: darken($accent, 15%);
+
+// $bx-accent: 0 4px 4px rgba($accent, 0, 25);
+$bx-16: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+$default-font: 'Montserrat', sans-serif;
+
+$mobile: 480px;
