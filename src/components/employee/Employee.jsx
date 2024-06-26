@@ -1,11 +1,16 @@
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './Employee.module.scss'
 const Employee = () => {
-	const currentTime = new Date().toLocaleTimeString([], {
-		hour: '2-digit',
-		minute: '2-digit',
-	})
+	const currentTime = new Date()
+	const [now, setNow] = useState(currentTime)
 
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setNow(new Date())
+		}, 1000)
+		return () => clearInterval(interval)
+	}, [])
 	return (
 		<div className={styles.wrapper}>
 			<section className={styles.user}>
@@ -18,7 +23,14 @@ const Employee = () => {
 					</h1>
 					<p>Junior UI/UX designer</p>
 					<p>
-						Россия, Москва <span className={styles.time}> • {currentTime}</span>
+						Россия, Москва{' '}
+						<span className={styles.time}>
+							{'  '}•{'  '}
+							{now.toLocaleTimeString([], {
+								hour: '2-digit',
+								minute: '2-digit',
+							})}
+						</span>
 					</p>
 				</div>
 			</section>
